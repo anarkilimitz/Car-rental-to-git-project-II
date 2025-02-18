@@ -1,0 +1,630 @@
+/* -----Normalize----- */
+
+/* {
+	box-sizing: border-box; поля,отступы и границы добавляются внутрь блока
+	margin: 0;
+	padding: 0;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+html {
+	font-family: "Source Serif 4", serif;
+}
+
+/* ------------------------------------------------------ */
+body {
+	/* background-color: #e8f1fb; */
+	background: #f8f8f8;
+	margin: 0 auto; /* Центрирование по горизонтали */
+	-ms-overflow-style: none; /* IE и Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* -----Header------- */
+.header {
+	position: sticky;
+	top: 0;
+	background-color: #051c34;
+	padding: 2px;
+	z-index: 20;
+}
+
+.header__block {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 800px;
+
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+}
+
+.header a {
+	color: #e8f1fb;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 150%;
+	text-decoration: none;
+}
+/* ------------------------------------------------------------- */
+.logo__car {
+	display: block;
+	width: 100%;
+}
+/* ---------------------------------------------------------- */
+.container {
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.title__right {
+	margin: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	text-align: center;
+	font-weight: 300;
+	-webkit-text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
+	-moz-text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
+	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+.title:hover {
+	transform: scale(1.02);
+}
+
+.title__big {
+	padding: 10px;
+	border: 4px solid #f8f8f8;
+	border-radius: 1px; /* Первый бордер */
+	outline: 2px solid rgba(5, 28, 52, 0.256); /* Второй бордер */
+	color: rgba(5, 28, 52);
+	font-size: 40px;
+	line-height: 50px;
+	transition: background-color 1s ease;
+	transition: 1s;
+}
+
+.title__big:hover {
+	border: 4px solid rgba(5, 28, 52, 0.281); /* Первый бордер */
+	outline: 5px solid #f8f8f8; /* Второй бордер */
+	color: #e4b12e;
+	transition: border-color 0.2s linear;
+	background-color: #f8f8f8; /* Новый цвет фона при наведении */
+	span {
+		color: #707070;
+	}
+	font-weight: 300;
+	cursor: default;
+}
+
+.title__colored {
+	color: rgba(5, 28, 52);
+	font-size: 41px;
+	line-height: 41px;
+}
+
+.btn {
+	min-width: 315px;
+	min-height: 72px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: block;
+	border-radius: 2px;
+	background: linear-gradient(0deg, #12131eaf, #565656 100%);
+	color: #fff;
+	text-shadow: -1px -1px 0px rgba(78, 78, 78, 0.299);
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: none;
+	-webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.btn {
+	transition: 1s;
+}
+.btn:hover {
+	transform: scale(1.03);
+	color: rgb(213, 214, 235);
+}
+
+.promo {
+	/* min-height: 800px; */
+	/* background: url(../icons/Audi\ 1.svg) no-repeat; */
+	padding: 22px 0 53px 0;
+}
+
+.promo {
+	transition: 1s;
+}
+.promo:hover {
+	transform: scale(1.01);
+}
+
+.logo__img {
+	width: 240px; /* Задайте нужную ширину для логотипа */
+	height: auto;
+}
+
+.logo__text {
+	margin-left: -60px;
+	width: 100%;
+	text-align: left;
+	color: rgb(5, 28, 52);
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	transition: 0.5s;
+	font-family: "Caveat", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 900;
+}
+
+/* -------------------------- Logo effect------------------------------------------ */
+
+.logo__text:hover {
+	color: rgb(44, 146, 255);
+	cursor: default;
+}
+/* -------------------------------------------------------------------- */
+
+.promo h1 {
+	font-weight: 500;
+	width: auto;
+	text-align: center;
+	text-transform: uppercase;
+	/* text-align: justify; Растягивает текст по ширине */
+	cursor: default;
+}
+
+.promo h1::before {
+	font-weight: 900;
+}
+
+.promo h2 {
+	width: 800px;
+	text-align: center;
+	-webkit-box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
+}
+
+.promo .btn {
+	margin-top: 40px;
+}
+
+.promo__text {
+	margin-top: 70px;
+	color: rgba(5, 28, 52);
+	text-align: center;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+.promo__text span {
+	color: #e4b12e;
+	text-transform: uppercase;
+}
+
+.title span {
+	color: #e4b12e;
+	transition: 1s;
+}
+
+.promo__more-text {
+	margin-top: 30px;
+	color: #538ed6;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.promo__more-img {
+	display: block;
+	margin: 10px auto 0 auto;
+}
+
+.intensive {
+	background-color: #efefef;
+	padding: 80px 0;
+}
+
+.intensive__title {
+	color: #252525;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.divider {
+	width: 220px;
+	height: 7px;
+	background-color: #f9bf3b;
+	margin: 14px auto 0 auto;
+}
+
+.intensive__subtitle {
+	margin-top: 15px;
+	color: #4a4a4a;
+	text-align: center;
+	font-size: 23px;
+	font-weight: 500;
+}
+
+/* Флекс контейнер */
+.intensive__wrapper {
+	display: block;
+	justify-content: space-between;
+	margin-top: 30px;
+	align-items: flex-start;
+}
+
+.intensive__item {
+	width: 360px;
+}
+
+.intensive__img {
+	width: 342px;
+	height: 210px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.intensive__descr {
+	margin-top: 15px;
+	color: #4a4a4a;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.info {
+	min-width: 564px;
+	background-color: #0f0b0b;
+	padding: 100px 0 140px 0;
+}
+
+.info__title {
+	color: #f9bf3b;
+	font-size: 30px;
+	text-align: right;
+}
+
+.info__text {
+	position: relative;
+	padding-left: 390px;
+	margin-top: 19px;
+	color: #ffff;
+	text-align: right;
+	font-size: 16px;
+	font-weight: 300;
+	z-index: 2;
+}
+
+.info__text.medium {
+	font-weight: 500;
+}
+
+.info__img {
+	width: 615px;
+	height: 351px;
+	object-fit: cover;
+	position: absolute;
+	top: 83px;
+	left: -83px;
+	z-index: 1;
+}
+
+.road__top {
+	background: url("../img/RoadTop.png") center center / cover no-repeat;
+	margin: 30px 0px 55px 0px;
+	padding: 100px;
+}
+
+.skills__title {
+	color: #efefef;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.skills__wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+
+.skills__item {
+	width: 224px;
+}
+
+.skills__round {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 118px;
+	height: 118px;
+	background-color: #f8bf3b;
+	border-radius: 100%;
+}
+
+.skills__img {
+	max-width: 60px;
+}
+
+.skills__desc {
+	margin-top: 18px;
+	text-align: center;
+	color: #efefef;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+/* ----Present---- */
+.present__intensive {
+	background-color: white;
+	padding: 30px;
+}
+
+.present__img {
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+.present__text {
+	max-width: 800px;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	color: #4a4a4a;
+	text-align: center;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 28px;
+}
+
+.present__wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+/* -------Webinar-------- */
+
+.webinar {
+	background-color: #41d8d3;
+	padding: 50px 0;
+}
+
+.webinar__img {
+	width: 500px;
+	height: 250px;
+	object-fit: cover;
+	display: block;
+	margin: 0 auto;
+}
+
+.webinar__subtitle {
+	margin-top: 40px;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.webinar__title {
+	margin-top: 20px;
+	color: #f9bf3b;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.webinar__cta {
+	margin-top: 20px;
+	color: #efefef;
+	text-align: center;
+	font-size: 23px;
+	font-weight: 500;
+}
+
+.road__bottom {
+	background: url("../img/RoadButtom.png") center center / cover no-repeat;
+	margin: 30px 0px 0px 0px;
+	padding: 180px;
+}
+
+/* ---------- Map ------------------------------------ */
+
+.map__address {
+	height: 400px;
+	margin: 20px;
+	padding: 0; /* Поля вокруг текста */
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+/* -----Footer------- */
+.footer {
+	background-color: #051c34;
+	padding: 58px 0;
+}
+
+.footer__block {
+	margin: 0 auto;
+	max-width: 300px;
+	text-align: center;
+	color: #888;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+}
+
+.footer a {
+	color: #888;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+	text-decoration: none;
+}
+
+.footer .underlined {
+	text-decoration: underline;
+}
+
+/* ----------- Dialog-window ------------------------------------------------- */
+.dialog__title {
+	font-size: 2rem;
+	line-height: 1.5;
+	padding: 0.5rem 0;
+	text-align: center;
+}
+
+.dialog__links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.dialog__links a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #000;
+	transition: color 0.3s ease;
+}
+
+.dialog__links a:hover {
+	color: rgb(44, 146, 255);
+}
+
+.dialog__links .underlined {
+	text-decoration: underline;
+}
+
+dialog {
+	padding: 1rem 3rem;
+	background: white;
+	max-width: 100%;
+	border-radius: 20px;
+	border: 0;
+	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+	animation: fadeIn 1s ease both;
+}
+
+dialog::backdrop {
+	animation: fadeIn 1s ease both;
+	z-index: 2;
+	backdrop-filter: blur(20px);
+}
+
+.x {
+	filter: grayscale(1);
+	border: none;
+	background: none;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	transition: ease filter, transform 0.3s;
+	cursor: pointer;
+	transform-origin: center;
+}
+
+.x:hover {
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 80px; /* Уменьшаем отступы */
+        /* padding: 5px; Уменьшаем внутренние отступы */
+    }
+}
+
+@media (max-width: 768px) {
+    .header__block {
+        /* flex-direction: column; Элементы в столбик на мобильных */
+        gap: 10px;  /*Уменьшаем отступы */
+    }
+
+    .header__links a,
+    .header__block > a {
+        font-size: 4vw; /* Адаптивный размер текста */
+    }
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .dialog__title {
+        font-size: 5vw; /* Адаптивный размер текста */
+    }
+
+    .dialog__links a {
+        font-size: 4vw; /* Адаптивный размер текста */
+    }
+}
+
+@media (max-width: 768px) {
+	.logo__text {
+		text-align: center;
+	}
+	
+}
