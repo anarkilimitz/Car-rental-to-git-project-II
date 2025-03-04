@@ -206,7 +206,7 @@ body {
 /* -------------------------- Logo effect------------------------------------------ */
 
 .logo__text:hover {
-	color: rgb(44, 146, 255);
+	color: rgb(28, 76, 129);
 	cursor: default;
 }
 /* -------------------------------------------------------------------- */
@@ -410,7 +410,7 @@ body {
 /* ----Present---- */
 .present__intensive {
 	background-color: white;
-	padding: 30px;
+	padding: 30px 0 83px 0;
 }
 
 .present__img {
@@ -472,7 +472,53 @@ body {
 	font-size: 23px;
 	font-weight: 500;
 }
+/* ------------------- Бегущая строка ------------------------ */
 
+.scrolling-container {
+	margin-top: 20px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+.scrolling-wrapper {
+	display: inline-block;
+	animation: scroll 60s linear infinite;
+}
+
+.scrolling-wrapper img {
+	width: 80vh;
+	height: auto;
+	margin: 0 10px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 10px;
+	max-inline-size: none;
+}
+
+/* Анимация для бегущей строки */
+@keyframes scroll {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@media (max-width: 768px) {
+	.scrolling-wrapper img {
+		width: 80vw; /* Увеличиваем ширину для мобильных */
+		margin: 0 5px;
+	}
+
+	.scrolling-wrapper {
+		animation-duration: 60s;
+	}
+}
+
+/* ------------------ Дорога нижняя картинка -------------------- */
 .road__bottom {
 	background: url("../img/RoadButtom.png") center center / cover no-repeat;
 	margin: 30px 0px 0px 0px;
@@ -593,38 +639,37 @@ dialog::backdrop {
 /* --------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-    .logo {
-        margin: 80px; /* Уменьшаем отступы */
-        /* padding: 5px; Уменьшаем внутренние отступы */
-    }
+	.logo {
+		margin: 80px; /* Уменьшаем отступы */
+		/* padding: 5px; Уменьшаем внутренние отступы */
+	}
 }
 
 @media (max-width: 768px) {
-    .header__block {
-        /* flex-direction: column; Элементы в столбик на мобильных */
-        gap: 10px;  /*Уменьшаем отступы */
-    }
+	.header__block {
+		/* flex-direction: column; Элементы в столбик на мобильных */
+		gap: 10px; /*Уменьшаем отступы */
+	}
 
-    .header__links a,
-    .header__block > a {
-        font-size: 4vw; /* Адаптивный размер текста */
-    }
+	.header__links a,
+	.header__block > a {
+		font-size: 4vw; /* Адаптивный размер текста */
+	}
 }
 
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
-    .dialog__title {
-        font-size: 5vw; /* Адаптивный размер текста */
-    }
+	.dialog__title {
+		font-size: 5vw; /* Адаптивный размер текста */
+	}
 
-    .dialog__links a {
-        font-size: 4vw; /* Адаптивный размер текста */
-    }
+	.dialog__links a {
+		font-size: 4vw; /* Адаптивный размер текста */
+	}
 }
 
 @media (max-width: 768px) {
 	.logo__text {
 		text-align: center;
 	}
-	
 }
