@@ -8,7 +8,7 @@ ScrollReveal().reveal("section", {
 });
 
 ScrollReveal().reveal(
-	".title, .promo__text, .present__text, .map__address, .scrolling-container, .footer",
+	".title, .promo__text, .present__text, .map__address, .scrolling-container, .btn",
 	{
 		delay: 200, // Задержка перед началом анимации
 		distance: "30px", // Расстояние, с которого элемент появляется
@@ -22,4 +22,9 @@ ScrollReveal().reveal(
 	}
 );
 
-// -------------------------------------------------------------------------------------
+// ------------ Video ----------------------
+
+const video = document.getElementById("promoVideo");
+
+// Устанавливаем скорость воспроизведения (0.5 = 50% скорости)
+video.playbackRate = 0.8;

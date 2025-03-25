@@ -3,17 +3,18 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="autor" content="Evgenii anarki">
-	<meta name="copyright" content="Все права принадлежат Evgenii anarki">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="autor" content="Evgenii anarki" />
+	<meta name="copyright" content="Все права принадлежат Evgenii anarki" />
 	<title>Кианит-Авто</title>
-	<link rel="stylesheet" href="css/modern-normalize.min.css"> <!--Подключаем перед моими стилями-->
+	<link rel="stylesheet" href="css/modern-normalize.min.css" /> <!--Подключаем перед моими стилями-->
 	<link
 		href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
 		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet" />
 	<!-- rentalavt-->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
@@ -22,15 +23,15 @@
 		<div class="header__block">
 			<div class="header__links">
 				<!-- # в ссылках используется как заглушка. Когда мы никуда не хотим переходить -->
-				<a href="#" class="underlined">info@info.ru</a>
+				<a class="icon-mail" href="#" class="underlined">info@info.ru</a>
 			</div>
 
 			<div class="header__links">
-				<a href="#" class="underlined">Екатеринбург</a>
+				<a class="icon-home" href="#map__city" class="underlined">Екатеринбург</a>
 			</div>
 
 			<!-- Текст можно разместить без обертки, тогда он относится к своему родителю -->
-			<a href="tel:+15555551234">+1 (555) 555 1234</a>
+			<a class="icon-phone" href="tel:+15555551234">+1 (555) 555 1234</a>
 			<!-- Ссылки можно создавать для быстрых звонков и отправки електронных писем (mailto) -->
 		</div>
 	</header>
@@ -41,12 +42,20 @@
 			</div>
 		</div>
 
-		<section class="road__top"></section>
+		<div class="container">
+			<div class="title__right">
+				<h1 class="title title__colored">Прокат и аренда авто для бизнеса и такси</h1>
+			</div>
+		</div>
 
 		<section class="promo">
+			<video autoplay muted loop class="promo__video" id="promoVideo">
+				<source src="Video/video-bg.mp4" type="video/mp4">
+				Видео не поддерживается браузером, обновите браузер.
+			</video>
 			<div class="container">
-				<h1 class="title title__colored">Прокат и аренда авто для бизнеса и такси</h1>
-				<div class="title__right">
+
+				<div class="title__right title__top">
 					<h2 class="title title__big">Автомобили класа: эконом, среднего и премиум класса, от <span>2400
 							рублей!</span>
 					</h2>
@@ -58,7 +67,7 @@
 					<span>Звоните прямо сейчас!</span>
 				</p>
 
-				<button class="btn primary" onclick="window.dialog.showModal();">Связаться с нами</button>
+				<button class="btn" onclick="window.dialog.showModal();">Связаться с нами</button>
 
 				<dialog id="dialog">
 					<p class="dialog__title">Позвоните или напишите нам!</p>
@@ -70,9 +79,38 @@
 				</dialog>
 			</div>
 		</section>
+
+		<!-- ----------- Бренды авто -------------------- -->
+		<!-- <section class="empty__block"></section> -->
+		<section class="container__brands">
+			<div class="brands__logo">
+				<img src="icons/Car-brands/Honda.svg" alt="honda">
+				<img src="icons/Car-brands/Nissan.svg" alt="nissan">
+				<img src="icons/Car-brands/Acura.svg" alt="acura">
+				<img src="icons/Car-brands/Jaguar.svg" alt="jaguar">
+				<img src="icons/Car-brands/Volvo.svg" alt="volvo">
+				<img src="icons/Car-brands/Audi.svg" alt="audi">
+			</div>
+		</section>
+		<!-- -------- Дорога верхняя картинка ------------- -->
+		<section class="road__top"></section>
+		<!-- -------------- Осаго -------------------------------- -->
+		<section class="present__intensive">
+			<div class="container">
+				<div><img src="img/OSAGO.png" alt="present" class="present__img"></div>
+				<div class="present__wrapper">
+					<p class="present__text">У нас ОСАГО уже включено в стоимость аренды авто — никаких скрытых платежей
+						и дополнительных затрат. Мы заботимся о вашей безопасности и комфорте, чтобы вы могли
+						наслаждаться поездкой без лишних хлопот. Арендуйте с уверенностью, зная, что всё необходимое уже
+						учтено!</p>
+				</div>
+				<button class="btn primary" onclick="window.dialog.showModal();">Связаться с нами</button>
+			</div>
+		</section>
 		<!-- -------- Дорога нижняя картинка ------------- -->
 		<section class="road__bottom"></section>
 
+		<!-- -------------- Блок -------------------------- -->
 		<!-- <section class="intensive">
 			<div class="container">
 				<h2 class="title intensive__title">What awaits you in our intensive?</h2>
@@ -101,40 +139,10 @@
 				</div>
 
 			</div>
-		</section> -->
+		</section>
 
-		<!-- <section class="info">
+		<section class="skills">
 			<div class="container">
-				<h2 class="title info__title">What is online radio and why is it needed?</h2>
-
-				<img src="img/online_radio.jpg" alt="radio" class="info__img">
-
-				<p class="info__text">Online radio has revolutionized the way we consume audio content. With just a
-					click or a tap, listeners can access a
-					diverse array of music, talk shows, news, and podcasts from around the globe. Unlike traditional
-					radio, online radio
-					offers a virtually limitless selection of stations catering to every taste and interest</p>
-
-				<p class="info__text">Whether you're into pop, rock, jazz, classical, or any other genre or even
-					podcasts, there's an online radio station for
-					you. Online radio also provides opportunities for independent artists and niche genres to reach a
-					wider audience</p>
-
-				<p class="info__text">Furthermore, the convenience of online radio cannot be overstated. It's accessible
-					anytime, anywhere, whether you're at
-					home, work, or on the go. With mobile apps and streaming services, listeners can enjoy their
-					favorite stations on
-					smartphones, tablets, or computers with an internet connection</p>
-
-				<p class="info__text medium">We will teach you how to create an attractive online radio for users and
-					the right website for search engines and advise
-					you on how to get it to the first pages, beating all competitors.</p>
-
-			</div>
-		</section> -->
-		<!-- <section class="skills">
-			<div class="container">
-				<h2 class="title skills__title">After completing the training you will be able to!</h2>
 
 				<div class="divider"></div>
 
@@ -169,38 +177,25 @@
 			</div>
 		</section> -->
 
-		<section class="present__intensive">
-			<div class="container">
-				<div><img src="img/OSAGO.png" alt="present" class="present__img"></div>
 
-				<div class="present__wrapper">
-					<p class="present__text">У нас ОСАГО уже включено в стоимость аренды авто — никаких скрытых платежей
-						и дополнительных затрат. Мы заботимся о вашей безопасности и комфорте, чтобы вы могли
-						наслаждаться поездкой без лишних хлопот. Арендуйте с уверенностью, зная, что всё необходимое уже
-						учтено!</p>
-				</div>
 
-				<button class="btn primary" onclick="window.dialog.showModal();">Связаться с нами</button>
-
-			</div>
-		</section>
-		<!-- -------------- Бегущая строка ---------------->
+		<!-- -------------- Бегущая строка --------------  -->
 		<section>
-		<div class="scrolling-container">
-			<div class="scrolling-wrapper">
-				<!-- Основные изображения -->
-				<img src="img/audi-car.webp" alt="Фото 1">
-				<img src="img/audi-car.webp" alt="Фото 2">
-				<img src="img/audi-car.webp" alt="Фото 3">
-				<!-- Дублированные изображения -->
-				<img src="img/audi-car.webp" alt="Фото 1">
-				<img src="img/audi-car.webp" alt="Фото 2">
-				<img src="img/audi-car.webp" alt="Фото 3">
+			<div class="scrolling-container">
+				<div class="scrolling-wrapper">
+					<!-- Основные изображения -->
+					<img src="img/Car1.jpg" alt="Фото 1">
+					<img src="img/Car2.jpg" alt="Фото 2">
+					<img src="img/Car3.jpg" alt="Фото 3">
+					<!-- Дублированные изображения -->
+					<img src="img/Car1.jpg" alt="Фото 1">
+					<img src="img/Car2.jpg" alt="Фото 2">
+					<img src="img/Car3.jpg" alt="Фото 3">
+				</div>
 			</div>
-		</div>
 		</section>
 		<!-- ----------------- Карта -------------------------- -->
-		<section class="map__address">
+		<section id="map__city" class="map__address">
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.0988867448667!2d60.61399866709059!3d56.924930508751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c1725be3a60e75%3A0xa0cac11fb837b76e!2z0L_RgC4g0JrQvtGB0LzQvtC90LDQstGC0L7QsiwgMTEyLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwNTg!5e0!3m2!1sru!2sru!4v1739641520326!5m2!1sru!2sru"
 				width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -208,15 +203,16 @@
 		</section>
 		<footer class="footer">
 			<div class="footer__block">
-				<div class="footer__links">
-					<a href="#" class="underlined">info@info.ru</a>
-					<!-- # в ссылках используется как заглушка. Когда мы никуда не хотим переходить -->
-					|
-					<a href="#" class="underlined">Privacy Policy</a>
+				<div class="footer__links"></div>
+				Позвоните нам <a class="icon-phone" href="tel:+15555551234">+1 (555) 555 1234</a>
+				Или напишите<a class="email__footer underlined icon-mail">info@info.ru</a>
+				<div class="logo__container-footer">
+					<div class="icon-whatsapp"></div>
+					<div class="icon-telegram"></div>
 				</div>
-				<!-- Текст можно разместить без обертки, тогда он относится к своему родителю -->
-				Позвоните нам <a href="tel:+15555551234">+1 (555) 555 1234</a>
-				<!-- Ссылки можно создавать для быстрых звонков и отправки електронных писем (mailto) -->
+				<div class="logo__container">
+					<h1 class="logo__text logo__footer">RentalAvto Kianit</h1>
+				</div>
 			</div>
 		</footer>
 
