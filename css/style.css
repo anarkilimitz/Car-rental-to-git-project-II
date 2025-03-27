@@ -307,14 +307,6 @@ body {
 	font-weight: 500;
 }
 
-.divider {
-	width: 800px;
-	height: 4px;
-	background-color: #051c34;
-	margin: 14px auto 0 auto;
-	border-radius: 4px;
-}
-
 .intensive__subtitle {
 	margin-top: 15px;
 	color: #4a4a4a;
@@ -402,34 +394,34 @@ body {
 .skills__wrapper {
 	display: flex;
 	justify-content: space-around;
-	margin-top: 40px;
+	margin-bottom: 100px;
 }
 
 .skills__item {
 	width: 224px;
 }
 
-.skills__round {
+.pay__rectangle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	width: 118px;
-	height: 118px;
-	background-color: #f8bf3b;
-	border-radius: 100%;
+	width: 160px;
+	height: 85px;
+	background-color: #03dd0795;
+	border-radius: 10px;
 }
 
 .skills__img {
-	max-width: 60px;
+	max-width: 110px;
 }
 
 .skills__desc {
 	margin-top: 18px;
 	text-align: center;
-	color: #efefef;
-	font-size: 16px;
-	font-weight: 300;
+	color: #000000;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 /* ----Present---- */
@@ -497,6 +489,27 @@ body {
 	font-size: 23px;
 	font-weight: 500;
 }
+
+/* --------------------- Оплата ------------------------ */
+.pay__wrapper {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.pay__text {
+	max-width: 800px;
+	margin-top: 40px;
+	margin-bottom: 100px;
+	color: #4a4a4a;
+	text-align: center;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 28px;
+}
+
 /* ------------------- Бегущая строка ------------------------ */
 
 .scrolling-container {
