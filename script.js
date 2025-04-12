@@ -21,10 +21,7 @@ ScrollReveal().reveal(
 		reset: true, // Анимация повторяется при каждой прокрутке
 	}
 );
-
 // ------------ Video ----------------------
-
 const video = document.getElementById("promoVideo");
-
 // Устанавливаем скорость воспроизведения (0.5 = 50% скорости)
 video.playbackRate = 0.8;

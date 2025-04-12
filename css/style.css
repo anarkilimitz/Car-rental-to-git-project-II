@@ -18,8 +18,8 @@ ul {
 	margin: 0;
 }
 
-ol[role="list"],
-ul[role="list"] {
+ol[role='list'],
+ul[role='list'] {
 	list-style: none;
 	padding-inline: 0;
 }
@@ -39,7 +39,7 @@ img {
 }
 
 html {
-	font-family: "Source Serif 4", serif;
+	font-family: 'Source Serif 4', serif;
 }
 
 /* ------------------------------------------------------ */
@@ -145,7 +145,13 @@ body {
 	font-size: 41px;
 	word-spacing: 5px;
 	font-weight: 500;
-	text-transform: uppercase
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+	.title__colored {
+		font-size: 7vw;
+	}
 }
 
 .btn {
@@ -170,18 +176,25 @@ body {
 	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
-.btn {
-	transition: 0.5s;
+@media screen and (max-width: 768px) {
+	.btn {
+		min-width: 300px;
+		min-height: 73px;
+	}
 }
+
 .btn:hover {
-	transform: scale(1.03);
+	box-shadow: 0px 3px 10px 1px rgba(255, 255, 255, 0.552);
 }
+
+.btn:active {
+	box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.8) inset;
+}
+/* --------------------------------------------------------------------- */
 
 .promo {
 	min-height: 630px;
-	/* background: url(../icons/Audi\ 1.svg) no-repeat; */
 	padding: 22px 0 65px 0;
-	/* margin-top: 165px; */
 }
 /* ------------ Видео -------------------------- */
 
@@ -196,7 +209,12 @@ body {
 	z-index: 0; /* Видео на заднем плане */
 	opacity: 1;
 	clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
+}
 
+@media screen and (max-width: 768px) {
+	.promo__video {
+		height: auto;
+	}
 }
 
 .logo__img {
@@ -213,16 +231,15 @@ body {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-	transition: 0.5s;
-	font-family: "Caveat", serif;
+	font-family: 'Caveat', serif;
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-weight: 900;
 
-@media screen and (max-width: 1287px) {
-    & {
-        margin-left: 20px;
-    }
+	@media screen and (max-width: 1287px) {
+		& {
+			margin-left: 20px;
+		}
 	}
 }
 
@@ -255,6 +272,18 @@ body {
 	box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+	.promo h2 {
+		margin-top: 20px;
+		color: #000;
+		font: 500;
+		background-color: #f0eeeed6;
+		span {
+			color: #efcd24ee;
+		}
+	}
+}
+
 .promo .btn {
 	margin-top: 40px;
 }
@@ -269,6 +298,14 @@ body {
 	line-height: 28px;
 }
 
+@media screen and (max-width: 768px) {
+	.promo__text {
+		color: black;
+		margin: 1rem;
+		font-size: 18px;
+	}
+}
+
 .promo__text span {
 	color: #e4b12e;
 	text-transform: uppercase;
@@ -277,7 +314,7 @@ body {
 .title span {
 	color: #ffffff;
 	transition: 1s;
-	font-weight:400;
+	font-weight: 400;
 }
 
 .promo__more-text {
@@ -380,9 +417,16 @@ body {
 }
 
 .road__top {
-	background: url("../img/RoadTop.png") center center / cover no-repeat;
+	background: url('../img/RoadTop.png') center center / cover no-repeat;
 	margin: 30px 0px 3px 0px;
 	height: 220px;
+}
+
+@media screen and (max-width: 768px) {
+	.road__top {
+		width: 100%;
+		height: 120px;
+	}
 }
 
 .skills__title {
@@ -395,6 +439,15 @@ body {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+	.skills__wrapper {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
 }
 
 .skills__item {
@@ -446,6 +499,13 @@ body {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 28px;
+}
+
+@media screen and (max-width: 768px) {
+	.present__text {
+		font-size: 18px;
+		margin: 1rem;
+	}
 }
 
 .present__wrapper {
@@ -510,6 +570,13 @@ body {
 	line-height: 28px;
 }
 
+@media screen and (max-width: 768px) {
+	.pay__text {
+		font-size: 18px;
+		margin: 1rem;
+	}
+}
+
 /* ------------------- Бегущая строка ------------------------ */
 
 .scrolling-container {
@@ -565,19 +632,17 @@ body {
 	max-width: 100%;
 	background-color: #fff;
 	padding-top: 20px;
-
 }
 @media (max-width: 768px) {
 	.brands__logo {
 		display: flex;
 		flex-direction: column;
-    	align-items: center;
-
+		align-items: center;
 	}
 	.brands__logo img {
-    width: clamp(80px, 15vw, 150px); /* Адаптивная ширина */
-    height: auto;
-}
+		/* width: clamp(80px, 15vw, 150px); Адаптивная ширина */
+		height: auto;
+	}
 }
 
 .brands__logo {
@@ -595,9 +660,16 @@ body {
 
 /* ------------------ Дорога нижняя картинка -------------------- */
 .road__bottom {
-	background: url("../img/RoadButtom.png") center center / cover no-repeat;
+	background: url('../img/RoadButtom.png') center center / cover no-repeat;
 	margin: 0px 0px 0px 0px;
 	height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+	.road__bottom {
+		width: 100%;
+		height: 120px;
+	}
 }
 
 /* ---------- Map ------------------------------------ */
@@ -619,48 +691,56 @@ body {
 }
 
 .footer__block {
-	display: inline-flex;
-	flex-direction: column;	
-	margin: auto 100px;px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 60px;
 	color: #888;
 	font-size: 18px;
 	font-weight: 300;
-	line-height: 150%;
+	line-height: 30px;
+}
+
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+
+.icon-phone:hover {
+	color: #ffff;
+}
+
+.icon-mail:hover {
+	color: #ffff;
 }
 
 @media screen and (max-width: 768px) {
+	.footer {
+		padding: 30px;
+	}
 	.footer__block {
+		position: static;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
-		/* font-size: 5vw; Адаптивный размер текста */
+		margin: 0 auto;
+	}
+
+	.logo__container-footer {
+		display: flex;
+		margin: 20px auto; /* Добавляем отступы и центрируем */
+		justify-content: center; /* Центрируем элементы внутри */
+	}
+
+	.logo__text {
+		font-size: 24px;
 	}
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    padding-bottom: 80px; /* Добавляем место для логотипа */
-  }
-
-  .logo__container {
-    position: absolute;
-    right: auto; /* Сбрасываем right */
-    left: 50%;   /* Центрируем */
-    bottom: 20px; /* Прижимаем к низу */
-    transform: translateX(-50%); Точное центрирование
-    margin-right: 0;
-  }
-
-  .logo__footer {
-    font-size: 6vw; Адаптивный размер текста
-    /* text-align: center; Центрируем текст */
-  }
-}
-
-
 .footer a {
 	color: #888;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 300;
 	line-height: 150%;
 	text-decoration: none;
@@ -682,24 +762,29 @@ body {
 	z-index: 100;
 }
 
-.footer__block .logo__footer {
+.logo__footer {
+	white-space: nowrap;
 	color: #ffff;
+	font-size: 40px;
+	line-height: normal;
+	font-family: 'Caveat', serif;
+	font-weight: 900;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 .logo__container-footer {
-	position: absolute;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	gap: 20px;
 	font-size: 30px;
-	left: 45%;
-	top: 50%;
 }
 
 .icon-whatsapp,
 .icon-telegram {
 	transition: all 0.4s ease;
 	/* transform: rotateX(360deg); */
-
 }
 
 .icon-whatsapp:hover,
@@ -709,7 +794,6 @@ body {
 	transform: scale(1.5);
 	transform: rotate(360deg) scale(1.5);
 }
-
 
 /* ----------- Dialog-window -------------------------- */
 .dialog__title {
