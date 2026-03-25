@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="autor" content="Evgenii anarki" />
-	<meta name="copyright" content="Все права принадлежат Evgenii anarki" />
+	<meta name="autor" content="Evgeniy anarki" />
+	<meta name="copyright" content="Все права принадлежат Evgeniy anarki" />
 	<title>Кианит-Авто</title>
 	<link rel="stylesheet" href="css/modern-normalize.min.css" /> <!--Подключаем перед моими стилями-->
 	<link
@@ -15,7 +15,15 @@
 	<!-- rentalavt-->
 	<link rel="stylesheet" href="css/fontello.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<!-- стили формы -->
+	<link rel="stylesheet" href="css/formcss/animations.css" />
+	<link rel="stylesheet" href="css/formcss/form.css" />
+	<link rel="stylesheet" href="css/formcss/layout.css" />
+	<link rel="stylesheet" href="css/formcss/variables.css" />
+
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script type="module" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -31,6 +39,7 @@
 			<a class="icon-phone" href="tel:+15555551234">+1 (555) 555 1234</a>
 		</div>
 	</header>
+
 	<main>
 		<div class="intensive__wrapper">
 			<div class="container">
@@ -62,16 +71,16 @@
 					<span>Звоните прямо сейчас!</span>
 				</p>
 
-				<button class="btn" onclick="window.dialog.showModal();">Связаться с нами</button>
+				<button class="btn" data-action="open-form">Отправить заявку</button>
 
-				<dialog id="dialog">
+				<!-- <dialog id="dialog">
 					<p class="dialog__title">Позвоните или напишите нам!</p>
 					<div class="dialog__links">
 						<a href="tel:+15555551234">+1 (555) 555 1234</a>
 						<a href="#" class="underlined">info@info.ru</a>
 					</div>
 					<button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
-				</dialog>
+				</dialog> -->
 			</div>
 		</section>
 
@@ -98,7 +107,7 @@
 						наслаждаться поездкой без лишних хлопот. Арендуйте с уверенностью, зная, что всё необходимое уже
 						учтено!</p>
 				</div>
-				<button class="btn primary" onclick="window.dialog.showModal();">Связаться с нами</button>
+				<button class="btn primary" data-action="open-form">Связаться с нами</button>
 			</div>
 		</section>
 		<!-- -------- Дорога нижняя картинка ------------- -->
@@ -167,8 +176,8 @@
 		<footer class="footer">
 			<div class="footer__block">
 				<div class="footer__links">
-				Позвоните нам <a class="icon-phone" href="tel:+15555551234">+1 (555) 555 1234</a>
-				Или напишите<a class="email__footer icon-mail">info@info.ru</a>
+					Позвоните нам <a class="icon-phone" href="tel:+15555551234">+1 (555) 555 1234</a>
+					Или напишите<a class="email__footer icon-mail">info@info.ru</a>
 				</div>
 				<div class="logo__container-footer">
 					<div class="icon-telegram"></div>
@@ -181,7 +190,74 @@
 		</footer>
 
 	</main>
-	<script src="script.js"></script>
+
+	<!-- Форма обратной связи -->
+
+	<div class="container-form">
+		<div class="card-form">
+			<h1 class="text-form">Связаться с нами</h1>
+			<button type="button" class="close-form btn-close">✖</button>
+			<form id="contactForm">
+				<div class="field">
+					<input type="text" name="firstName" placeholder=" " required>
+					<img src="icons/form/user.svg" class="icon-form icon-default">
+					<img src="icons/form/user-check.svg" class="icon-form icon-valid">
+					<label>Имя</label>
+					<span class="error"></span>
+				</div>
+
+				<div class="field">
+					<input type="text" name="lastName" placeholder=" " required>
+					<img src="icons/form/user.svg" class="icon-form icon-default">
+					<img src="icons/form/user-check.svg" class="icon-form icon-valid">
+					<label>Фамилия</label>
+					<span class="error"></span>
+				</div>
+
+				<div class="field">
+					<input type="tel" name="phone" placeholder=" " inputmode="tel" required>
+					<img src="icons/form/phone.svg" class="icon-form icon-default">
+					<img src="icons/form/phone-check.svg" class="icon-form icon-valid">
+					<label>Телефон</label>
+					<span class="error"></span>
+				</div>
+
+				<div class="field">
+					<input type="email" name="email" placeholder=" " required>
+					<img src="icons/form/mail.svg" class="icon-form icon-default">
+					<img src="icons/form/mail-check.svg" class="icon-form icon-valid">
+					<label>Email</label>
+					<span class="error"></span>
+				</div>
+
+				<div class="field">
+					<textarea name="message" placeholder=" " required></textarea>
+					<img src="icons/form/message.svg" class="icon-form icon-default">
+					<img src="icons/form/message-check.svg" class="icon-form icon-valid">
+					<label>Сообщение</label>
+					<span class="error"></span>
+				</div>
+
+				<div class="checkbox-field">
+					<label class="checkbox">
+						<input type="checkbox" name="agree">
+						<span class="policy-text">
+							Согласен с
+							<a href="#" target="_blank" class="policy-link">
+								политикой конфиденциальности
+							</a>
+						</span>
+					</label>
+					<span class="error"></span>
+				</div>
+
+				<button class="btn-form" type="submit">
+					<span class="btn-text">Отправить</span>
+				</button>
+			</form>
+		</div>
+	</div>
+
 </body>
 
 </html>
