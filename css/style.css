@@ -101,9 +101,11 @@ body.no-scroll {
 }
 
 .title__right {
-	margin: 40px;
+	margin-top: 40px;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .title {
@@ -116,6 +118,13 @@ body.no-scroll {
 	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
 	word-spacing: normal;
 	background-color: #ffffff6f;
+}
+
+.subtitle {
+	font-size: 24px;
+	word-spacing: 4px;
+	font-weight: 400;
+	text-transform: none;
 }
 
 .title__top {
