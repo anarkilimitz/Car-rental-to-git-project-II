@@ -45,9 +45,8 @@ html {
 
 /* ------------------------------------------------------ */
 body {
-	/* background-color: #e8f1fb; */
 	background: #ffffff;
-	margin: 0 auto; /* Центрирование по горизонтали */
+	margin: 0 auto;
 	-ms-overflow-style: none; /* IE и Edge */
 	scrollbar-width: none; /* Firefox */
 }
@@ -133,7 +132,6 @@ body.no-scroll {
 }
 
 .title__big:hover {
-	/* outline: 5px solid #ffffffd6; Второй бордер */
 	color: #000000;
 	background-color: #ffffffd6;
 	span {
@@ -203,13 +201,12 @@ body.no-scroll {
 
 .promo__video {
 	position: absolute;
-	/* margin-top: 120px; */
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /* Видео растягивается на весь блок, сохраняя пропорции */
-	z-index: 0; /* Видео на заднем плане */
+	object-fit: cover;
+	z-index: 0;
 	opacity: 1;
 	clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
 }
@@ -221,7 +218,7 @@ body.no-scroll {
 }
 
 .logo__img {
-	width: 240px; /* Задайте нужную ширину для логотипа */
+	width: 240px; /* задать нужную ширину для логотипа */
 	height: auto;
 }
 
@@ -259,7 +256,6 @@ body.no-scroll {
 	width: auto;
 	text-align: center;
 	text-transform: uppercase;
-	/* text-align: justify; Растягивает текст по ширине */
 	cursor: default;
 }
 
@@ -355,12 +351,9 @@ body.no-scroll {
 	font-weight: 500;
 }
 
-/* Флекс контейнер */
 .intensive__wrapper {
 	display: block;
-	justify-content: space-between;
 	margin-top: 30px;
-	align-items: flex-start;
 }
 
 .intensive__item {
@@ -606,7 +599,6 @@ body.no-scroll {
 	object-fit: cover;
 }
 
-/* Анимация для бегущей строки */
 @keyframes scroll {
 	0% {
 		transform: translateX(0%);
@@ -618,7 +610,7 @@ body.no-scroll {
 
 @media (max-width: 768px) {
 	.scrolling-wrapper img {
-		width: 80vw; /* Увеличиваем ширину для мобильных */
+		width: 80vw; /* увеличил ширину для мобильных */
 		margin: 0 5px;
 	}
 
@@ -643,7 +635,6 @@ body.no-scroll {
 		align-items: center;
 	}
 	.brands__logo img {
-		/* width: clamp(80px, 15vw, 150px); Адаптивная ширина */
 		height: auto;
 	}
 }
@@ -732,8 +723,8 @@ body.no-scroll {
 
 	.logo__container-footer {
 		display: flex;
-		margin: 20px auto; /* Добавляем отступы и центрируем */
-		justify-content: center; /* Центрируем элементы внутри */
+		margin: 20px auto;
+		justify-content: center;
 	}
 
 	.logo__text {
@@ -787,7 +778,6 @@ body.no-scroll {
 .icon-whatsapp,
 .icon-telegram {
 	transition: all 0.4s ease;
-	/* transform: rotateX(360deg); */
 }
 
 .icon-whatsapp:hover,
@@ -874,8 +864,7 @@ dialog::backdrop {
 
 @media (max-width: 768px) {
 	.logo {
-		margin: 80px; /* Уменьшаем отступы */
-		/* padding: 5px; Уменьшаем внутренние отступы */
+		margin: 80px;
 	}
 }
 
@@ -883,23 +872,23 @@ dialog::backdrop {
 	.header__block {
 		flex-direction: column;
 		align-items: center;
-		gap: 1vh; /*Уменьшаем отступы */
+		gap: 1vh;
 	}
 
 	.header__links a,
 	.header__block > a {
-		font-size: 4vw; /* Адаптивный размер текста */
+		font-size: 4vw;
 	}
 }
 
-/* Адаптивные стили для мобильных устройств */
+/* адаптив для мобильных */
 @media (max-width: 768px) {
 	.dialog__title {
-		font-size: 5vw; /* Адаптивный размер текста */
+		font-size: 5vw;
 	}
 
 	.dialog__links a {
-		font-size: 4vw; /* Адаптивный размер текста */
+		font-size: 4vw;
 	}
 }
 
