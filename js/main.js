@@ -76,3 +76,28 @@ document.addEventListener('keydown', (e) => {
 		closeModal();
 	}
 });
+
+// СВАЙПЕР
+const beforeSwiper = new Swiper('.beforeSwiper', {
+	slidesPerView: 1,
+	spaceBetween: 10,
+
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
+
+const afterSwiper = new Swiper('.afterSwiper', {
+	slidesPerView: 1,
+	spaceBetween: 10,
+	allowTouchMove: false, // чтобы не листали отдельно
+	speed: 700, // плавность
+});
+
+// синхронизация
+beforeSwiper.on('slideChange', () => {
+	setTimeout(() => {
+		afterSwiper.slideTo(beforeSwiper.activeIndex);
+	}, 150); // задержку второму слайдеру сделал для красоты
+});

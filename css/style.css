@@ -631,15 +631,22 @@ body.no-scroll {
 
 .container__brands {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	position: relative;
 	max-width: 100%;
 	background-color: #fff;
 	padding-top: 20px;
 }
+
+.brands__logo {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 110px;
+}
+
 @media (max-width: 768px) {
 	.brands__logo {
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -647,15 +654,7 @@ body.no-scroll {
 		height: auto;
 	}
 }
-
-.brands__logo {
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	gap: 50px;
-}
 /* --------------- Пустой блок ------------------------ */
-
 .empty__block {
 	height: 30px;
 	background-color: #fff;
@@ -904,5 +903,109 @@ dialog::backdrop {
 @media (max-width: 768px) {
 	.logo__text {
 		text-align: center;
+	}
+}
+
+/* Стили для СВАЙПЕРА */
+.slider-header {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.title-slider {
+	font-size: 36px;
+	font-weight: 600;
+	color: #000c41;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.subtitle-slider {
+	margin-top: 10px;
+	font-size: 20px;
+	color: #000c41;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+/* ДО / ПОСЛЕ */
+.slider-block {
+	width: 50%;
+	text-align: center;
+}
+
+.slider-label {
+	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	background: linear-gradient(45deg, #051d87, #3ce2ff);
+	display: inline-block;
+	padding: 6px 20px;
+	border-radius: 20px;
+	letter-spacing: 1px;
+}
+
+.compare {
+	margin-top: 100px;
+}
+
+.compare__wrapper {
+	display: flex;
+	gap: 20px;
+	margin-top: 60px;
+	margin-bottom: 200px;
+}
+
+.beforeSwiper,
+.afterSwiper {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	border-radius: 10px;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+/* Стрелки */
+
+.beforeSwiper .swiper-button-prev,
+.beforeSwiper .swiper-button-next {
+	color: white;
+	background: rgba(255, 255, 255, 0.5);
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 0; /* убрать кривизну чтобы кнопки были по центру */
+}
+
+/* уменьшаем стрелки */
+.beforeSwiper .swiper-button-prev::after,
+.beforeSwiper .swiper-button-next::after {
+	font-size: 18px;
+}
+
+.beforeSwiper .swiper-button-prev:hover,
+.beforeSwiper .swiper-button-next:hover {
+	background: linear-gradient(45deg, #051d87, #3ce2ff);
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+	.compare__wrapper {
+		flex-direction: column;
+	}
+
+	.beforeSwiper,
+	.afterSwiper {
+		width: 100%;
 	}
 }

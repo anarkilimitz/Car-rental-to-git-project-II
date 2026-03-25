@@ -7,7 +7,11 @@
 	<meta name="autor" content="Evgeniy anarki" />
 	<meta name="copyright" content="Все права принадлежат Evgeniy anarki" />
 	<title>Кианит-Авто</title>
-	<link rel="stylesheet" href="css/modern-normalize.min.css" /> <!--Подключаем перед моими стилями-->
+
+	<!--Подключаем перед моими стилями-->
+	<link rel="stylesheet" href="css/modern-normalize.min.css" />
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
 		rel="stylesheet">
@@ -20,8 +24,10 @@
 	<link rel="stylesheet" href="css/formcss/form.css" />
 	<link rel="stylesheet" href="css/formcss/layout.css" />
 	<link rel="stylesheet" href="css/formcss/variables.css" />
-
+	<!-- Swiper -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<!-- Основной -->
 	<script type="module" src="js/main.js"></script>
 
 </head>
@@ -101,6 +107,51 @@
 		</section>
 		<!-- -------- Дорога верхняя картинка ------------- -->
 		<section class="road__top"></section>
+
+		<!-- Слайдер ДО/ПОСЛЕ -->
+		<section class="compare">
+			<div class="container">
+				<div class="slider-header">
+					<h2 class="title-slider">Фотографии наших работ</h2>
+					<h3 class="subtitle-slider">До / После ремонта</h3>
+				</div>
+
+				<div class="compare__wrapper">
+					<div class="slider-block">
+						<div class="slider-label">ДО</div>
+						<!-- ДО -->
+						<div class="swiper beforeSwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-before1.jpg"></div>
+							</div>
+							<!-- стрелки -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="slider-block">
+						<div class="slider-label">ПОСЛЕ</div>
+						<!-- ПОСЛЕ -->
+						<div class="swiper afterSwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+								<div class="swiper-slide"><img src="img/slider/photo-after1.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- -------------- Осаго -------------------------------- -->
 		<section class="present__intensive">
 			<div class="container">
