@@ -135,7 +135,7 @@ body.no-scroll {
 }
 
 .title__top {
-	margin-top: 160px;
+	margin-top: 80px;
 }
 
 .title__big {
@@ -633,11 +633,6 @@ body.no-scroll {
 		height: auto;
 	}
 }
-/* --------------- Пустой блок ------------------------ */
-.empty__block {
-	height: 30px;
-	background-color: #fff;
-}
 
 /* ------------------ Дорога нижняя картинка -------------------- */
 .road__bottom {
@@ -666,168 +661,131 @@ body.no-scroll {
 
 /* -----Footer------- */
 .footer {
-	position: relative;
+	display: block;
+	height: 500px;
 	background-color: #12131ee0;
-	padding: 58px 0;
+	padding: 150px 0 30px 0;
+	color: #ffffff;
+	position: relative;
+	border-top: 2px solid #f9bf3b;
+}
+
+.footer__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .footer__block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 60px;
-	color: #888;
-	font-size: 18px;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.footer__section {
+	flex: 1;
+	min-width: 250px;
+}
+
+.footer__contacts p {
+	font-size: 16px;
 	font-weight: 300;
-	line-height: 30px;
+	margin-bottom: 10px;
+	color: #e8f1fb;
 }
 
-.footer__links {
-	display: flex;
-	flex-direction: column;
-	width: auto;
-}
-
-.icon-phone:hover {
-	color: #ffff;
-}
-
-.icon-mail:hover {
-	color: #ffff;
-}
-
-@media screen and (max-width: 768px) {
-	.footer {
-		padding: 30px;
-	}
-	.footer__block {
-		position: static;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0 auto;
-	}
-
-	.logo__container-footer {
-		display: flex;
-		margin: 20px auto;
-		justify-content: center;
-	}
-
-	.logo__text {
-		font-size: 24px;
-	}
-}
-
-.footer a {
-	color: #888;
-	font-size: 24px;
-	font-weight: 300;
-	line-height: 150%;
+.footer__link {
+	display: block;
+	font-size: 20px;
+	color: #f9bf3b;
 	text-decoration: none;
-	margin-bottom: 25px;
+	font-weight: 500;
+	transition: 0.3s;
 }
 
-.footer .underlined {
-	text-decoration: underline;
+.footer__link:hover {
+	color: #ffffff;
+	transform: translateX(5px);
 }
 
-.footer__block .email__footer {
-	text-decoration: none;
-}
-
-.logo__container {
-	position: absolute;
-	right: 0;
-	margin-right: 100px;
-	z-index: 100;
-}
-
-.logo__footer {
-	white-space: nowrap;
-	color: #ffff;
-	font-size: 40px;
-	line-height: normal;
-	font-family: 'Caveat', serif;
-	font-weight: 900;
-	font-optical-sizing: auto;
-	font-style: normal;
-}
-
-.logo__container-footer {
+/* глянцевый эффект на иконках */
+.social-icons {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
 	gap: 20px;
-	font-size: 30px;
 }
 
-.icon-whatsapp,
-.icon-telegram {
-	transition: all 0.4s ease;
-}
-
-.icon-whatsapp:hover,
-.icon-telegram:hover {
-	cursor: pointer;
-	color: #ffff;
-	transform: scale(1.5);
-	transform: rotate(360deg) scale(1.5);
-}
-
-/* ----------- Dialog-window -------------------------- */
-.dialog__title {
-	font-size: 2rem;
-	line-height: 1.5;
-	padding: 0.5rem 0;
-	text-align: center;
-}
-
-.dialog__links {
+.social-icons a {
+	width: 45px;
+	height: 45px;
+	background: linear-gradient(
+			180deg,
+			rgba(187, 184, 184, 0.84) 0%,
+			rgba(205, 199, 199, 0.826) 100%
+		),
+		#1e2030;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	margin-top: 1rem;
+	transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.dialog__links a {
-	font-size: 1.5rem;
-	text-decoration: none;
-	color: #000;
-	transition: color 0.3s ease;
+.social-icons a svg {
+	width: 27px;
+	height: 27px;
 }
 
-.dialog__links a:hover {
-	color: rgb(44, 146, 255);
-}
-
-.dialog__links .underlined {
-	text-decoration: underline;
-}
-
-.x {
-	filter: grayscale(1);
-	border: none;
-	background: none;
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	transition: ease filter, transform 0.3s;
-	cursor: pointer;
-	transform-origin: center;
-}
-
-.x:hover {
-	filter: grayscale(0);
+.social-icons a:hover {
+	background: #f9bf3b;
+	color: #12131e;
 	transform: scale(1.1);
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
+.logo__footer {
+	text-align: right;
+	font-family: 'Caveat', serif;
+	font-size: 32px;
+	font-weight: 900;
+}
+
+.logo__footer span {
+	color: #f9bf3b;
+}
+
+.footer__hr {
+	border: 0;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.1),
+		transparent
+	);
+	margin: 40px 0 20px 0;
+}
+
+.footer__copyright {
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+	font-weight: 300;
+}
+
+@media (max-width: 768px) {
+	.footer__block {
+		flex-direction: column;
+		text-align: center;
 	}
-	to {
-		opacity: 1;
+	.footer__link {
+		text-align: center;
+	}
+	.logo__footer {
+		text-align: center;
 	}
 }
 
@@ -848,17 +806,6 @@ body.no-scroll {
 
 	.header__links a,
 	.header__block > a {
-		font-size: 4vw;
-	}
-}
-
-/* адаптив для мобильных */
-@media (max-width: 768px) {
-	.dialog__title {
-		font-size: 5vw;
-	}
-
-	.dialog__links a {
 		font-size: 4vw;
 	}
 }
@@ -1023,5 +970,129 @@ body.no-scroll {
 	.info__text {
 		padding-left: 20px; /* Убираем огромный паддинг в 390px */
 		text-align: center;
+	}
+}
+
+/* ----------------  Услуги  ------------------ */
+
+.title__services {
+	margin-top: 150px;
+	font-size: 36px;
+	font-weight: 600;
+	color: #000c41;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.services__grid {
+	display: flex;
+	justify-content: space-between;
+	gap: 25px;
+	padding: 60px 0;
+}
+
+.services__item {
+	flex: 1;
+	background: #1e2030;
+	border-radius: 12px;
+	overflow: hidden;
+	height: fit-content;
+}
+
+.services__img-wrapper {
+	position: relative;
+	height: 250px;
+}
+
+.services__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.services__badge {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+	color: #fff;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Кнопка-триггер (глянец) */
+.btn-glossy-trigger {
+	width: 100%;
+	padding: 18px;
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	transition: 0.3s;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(255, 255, 255, 0) 50%
+		),
+		linear-gradient(110deg, #ffc131 49%, #000000 51%);
+}
+
+.btn-glossy-trigger:hover {
+	filter: brightness(1.1);
+}
+
+/* Аккордеон (Прайс-лист) */
+.services__price-list {
+	display: grid;
+	grid-template-rows: 0fr; /* Начальное состояние - скрыто */
+	transition: grid-template-rows 0.4s ease-out, padding 0.4s;
+	padding: 0 20px;
+	background: #161726;
+	overflow: hidden;
+}
+
+.services__price-inner {
+	overflow: hidden;
+}
+
+/* Когда активен */
+.services__item.active .services__price-list {
+	grid-template-rows: 1fr;
+	padding: 20px 20px 7px 20px;
+}
+
+.price-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	font-size: 15px;
+	color: #e8f1fb;
+	opacity: 0; /* Для анимации появления текста */
+	transition: 0.3s;
+}
+
+.services__item.active .price-item {
+	opacity: 1;
+}
+
+.btn-order-small {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	background: #f9bf3b;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.services__grid {
+		flex-direction: column;
 	}
 }
