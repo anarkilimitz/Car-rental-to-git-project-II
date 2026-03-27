@@ -55,6 +55,11 @@ body.no-scroll {
 	overflow: hidden;
 }
 
+::selection {
+	background: rgba(200, 137, 237, 0.701);
+	color: #000000;
+}
+
 /* -----Header------- */
 .header {
 	position: sticky;
@@ -96,12 +101,12 @@ body.no-scroll {
 
 .container {
 	position: relative;
-	max-width: 1140px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
 .title__right {
-	margin-top: 40px;
+	margin-top: 20px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -133,16 +138,15 @@ body.no-scroll {
 
 .title__big {
 	padding: 10px;
-	outline: 2px solid rgba(5, 28, 52, 0.256); /* Второй бордер */
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	font-size: 40px;
 	line-height: 50px;
 	transition: 0.2s;
+	background-color: #ffffffd6;
 }
 
 .title__big:hover {
-	color: #000000;
-	background-color: #ffffffd6;
+	background-color: #ffffffa1;
 	span {
 		color: #000000;
 	}
@@ -165,64 +169,34 @@ body.no-scroll {
 }
 
 .btn {
-	min-width: 315px;
-	min-height: 72px;
-	margin: 0 auto;
-	padding: 0 15px;
-	display: block;
-	border-radius: 2px;
-	background: linear-gradient(0deg, #12131eaf, #565656 100%);
-	color: #fff;
-	text-shadow: -1px -1px 0px rgba(78, 78, 78, 0.299);
-	font-size: 21px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	text-transform: uppercase;
-	cursor: pointer;
-	border: none;
-	-webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-	-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    min-width: 315px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: block;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(110deg, #000 50%, #f9bf3b 50%);
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(110deg, #1a1a1a 55%, #ffcc00 55%);
+    transform: scale(1.02);
 }
 
 @media screen and (max-width: 768px) {
 	.btn {
 		min-width: 300px;
 		min-height: 73px;
-	}
-}
-
-.btn:hover {
-	box-shadow: 0px 3px 10px 1px rgba(255, 255, 255, 0.552);
-}
-
-.btn:active {
-	box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.8) inset;
-}
-/* --------------------------------------------------------------------- */
-
-.promo {
-	min-height: 630px;
-	padding: 22px 0 65px 0;
-}
-/* ------------ Видео -------------------------- */
-
-.promo__video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: 0;
-	opacity: 1;
-	clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
-}
-
-@media screen and (max-width: 768px) {
-	.promo__video {
-		height: auto;
 	}
 }
 
@@ -244,21 +218,31 @@ body.no-scroll {
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-weight: 900;
-
-	@media screen and (max-width: 1287px) {
-		& {
-			margin-left: 20px;
-		}
-	}
 }
 
-/* -------------------------- Logo effect------------------------------------------ */
+/* ------------- Logo effect--------------------------------- */
 
 .logo__text:hover {
 	color: rgb(28, 76, 129);
 	cursor: default;
 }
-/* -------------------------------------------------------------------- */
+/* ---------------------- Promo -------------------------- */
+
+.promo {
+	position: relative;
+	margin-top: -40px;
+	width: 100%;
+	aspect-ratio: 5504 / 3072;
+	overflow: hidden;
+	background: url('../img/main/main-bg.png') center center / cover no-repeat;
+	clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+}
 
 .promo h1 {
 	font-weight: 500;
@@ -273,23 +257,12 @@ body.no-scroll {
 }
 
 .promo h2 {
-	width: 800px;
+	max-width: 800px;
+	width: 100%;
 	text-align: center;
 	-webkit-box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
 	-moz-box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
 	box-shadow: 0px 5px 15px 6px rgba(34, 60, 80, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-	.promo h2 {
-		margin-top: 20px;
-		color: #000;
-		font: 500;
-		background-color: #f0eeeed6;
-		span {
-			color: #efcd24ee;
-		}
-	}
 }
 
 .promo .btn {
@@ -304,14 +277,6 @@ body.no-scroll {
 	font-style: normal;
 	font-weight: 500;
 	line-height: 28px;
-}
-
-@media screen and (max-width: 768px) {
-	.promo__text {
-		color: black;
-		margin: 1rem;
-		font-size: 18px;
-	}
 }
 
 .promo__text span {
@@ -427,13 +392,6 @@ body.no-scroll {
 	height: 220px;
 }
 
-@media screen and (max-width: 768px) {
-	.road__top {
-		width: 100%;
-		height: 120px;
-	}
-}
-
 .skills__title {
 	color: #efefef;
 	font-size: 30px;
@@ -444,15 +402,6 @@ body.no-scroll {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 100px;
-}
-
-@media screen and (max-width: 768px) {
-	.skills__wrapper {
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		gap: 10px;
-	}
 }
 
 .skills__item {
@@ -504,13 +453,6 @@ body.no-scroll {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 28px;
-}
-
-@media screen and (max-width: 768px) {
-	.present__text {
-		font-size: 18px;
-		margin: 1rem;
-	}
 }
 
 .present__wrapper {
@@ -573,13 +515,6 @@ body.no-scroll {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 28px;
-}
-
-@media screen and (max-width: 768px) {
-	.pay__text {
-		font-size: 18px;
-		margin: 1rem;
-	}
 }
 
 /* ------------------- Бегущая строка ------------------------ */
@@ -939,7 +874,7 @@ dialog::backdrop {
 	font-size: 18px;
 	font-weight: 600;
 	color: #fff;
-	background: linear-gradient(45deg, #051d87, #3ce2ff);
+	background: linear-gradient(110deg, #000 50%, #f9bf3b 50%);
 	display: inline-block;
 	padding: 6px 20px;
 	border-radius: 20px;
@@ -1007,7 +942,7 @@ dialog::backdrop {
 
 .beforeSwiper .swiper-button-prev:hover,
 .beforeSwiper .swiper-button-next:hover {
-	background: linear-gradient(45deg, #051d87, #3ce2ff);
+	background: linear-gradient(110deg, #000 45%, #f9bf3b 50%);
 	transform: translateY(-50%) scale(1.1);
 }
 
@@ -1026,5 +961,39 @@ dialog::backdrop {
 	.beforeSwiper .swiper-button-next {
 		width: 36px;
 		height: 36px;
+	}
+}
+
+/* 1. Лечим кнопки и инфо-блоки */
+@media screen and (max-width: 1024px) {
+	.info {
+		min-width: 0 !important; /* Убиваем фиксацию */
+		width: 100%;
+		padding: 50px 20px;
+	}
+
+	.intensive__item {
+		width: 100%; /* Переводим на проценты */
+		max-width: 360px;
+		margin: 0 auto;
+	}
+
+	.btn {
+		min-width: 0 !important; /* Разрешаем кнопке сжиматься */
+		width: 90%;
+		max-width: 315px;
+	}
+
+	/* 2. Убираем вылеты за края */
+	.info__img {
+		position: relative;
+		left: 0;
+		width: 100%;
+		height: auto;
+	}
+
+	.info__text {
+		padding-left: 20px; /* Убираем огромный паддинг в 390px */
+		text-align: center;
 	}
 }
