@@ -844,6 +844,16 @@ body.no-scroll {
 	text-align: center;
 }
 
+@media (max-width: 768px) {
+	.compare__wrapper {
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+	.slider-block {
+		width: 100%;
+	}
+}
+
 .slider-label {
 	margin-bottom: 15px;
 	font-size: 18px;
