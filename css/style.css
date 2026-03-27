@@ -70,7 +70,7 @@ body.no-scroll {
 	background: rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	
+
 	border: 1px solid rgba(255, 255, 255, 0.1);
 
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -124,11 +124,6 @@ body.no-scroll {
 	margin: 0 auto;
 	text-align: center;
 	font-weight: 400;
-	border-radius: 30px;
-	-webkit-text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
-	-moz-text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
-	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.29);
-	word-spacing: normal;
 	background-color: #ffffff6f;
 }
 
@@ -334,8 +329,8 @@ body.no-scroll {
 }
 
 .title span {
-	color: #ffffff;
-	transition: 1s;
+	color: #f9bf3b;
+	transition: 0.2s;
 	font-weight: 400;
 }
 
@@ -483,7 +478,7 @@ body.no-scroll {
 /* ----Present---- */
 .present__intensive {
 	background-color: white;
-	padding: 0px 0 83px 0;
+	padding: 0px 0 105px 0;
 }
 
 .present__img {
@@ -808,22 +803,6 @@ body.no-scroll {
 
 .dialog__links .underlined {
 	text-decoration: underline;
-}
-
-dialog {
-	padding: 1rem 3rem;
-	background: white;
-	max-width: 100%;
-	border-radius: 20px;
-	border: 0;
-	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
-	animation: fadeIn 1s ease both;
-}
-
-dialog::backdrop {
-	animation: fadeIn 1s ease both;
-	z-index: 2;
-	backdrop-filter: blur(20px);
 }
 
 .x {
