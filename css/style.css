@@ -374,6 +374,20 @@ body.no-scroll {
 	margin-top: 30px;
 }
 
+/* логотип */
+
+.logo-main {
+    display: block;
+	margin-left: 60px;
+    z-index: 1000;
+
+    max-width: 140px;
+    height: auto;
+
+    cursor: default;
+}
+
+
 .intensive__item {
 	width: 360px;
 }
